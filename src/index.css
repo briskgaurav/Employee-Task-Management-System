@@ -5,3 +5,6 @@
 html,body{
     color: #fff;
 }
+#tasklist::-webkit-scrollbar{
+    display: none;
+}

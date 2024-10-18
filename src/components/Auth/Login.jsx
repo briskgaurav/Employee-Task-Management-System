@@ -22,7 +22,7 @@ function Login() {
               setEmail(e.target.value);
             }}
             className="px-4 py-2 text-white  rounded-full placeholder:text-zinc-400 bg-transparent outline-none border"
-            type="text"
+            type="email"
             placeholder="Email"
           />
           <input required
