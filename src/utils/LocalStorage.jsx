@@ -2,7 +2,14 @@ const employees = [
   {
     id: "emp001",
     email: "employee1@example.com",
-    pass: "password1",
+    pass: "123",
+    firstname: "Aarav",
+    taskcount: {
+      active: 2,
+      failed: 1,
+      completed: 1,
+      newTask: 1,
+    },
     tasks: [
       {
         active: true,
@@ -39,7 +46,14 @@ const employees = [
   {
     id: "emp002",
     email: "employee2@example.com",
-    pass: "password2",
+    pass: "123",
+    firstname: "Vivaan",
+    taskcount: {
+      active: 2,
+      failed: 1,
+      completed: 1,
+      newTask: 1,
+    },
     tasks: [
       {
         active: true,
@@ -76,7 +90,14 @@ const employees = [
   {
     id: "emp003",
     email: "employee3@example.com",
-    pass: "password3",
+    pass: "123",
+    firstname: "Reyansh",
+    taskcount: {
+      active: 2,
+      failed: 1,
+      completed: 1,
+      newTask: 1,
+    },
     tasks: [
       {
         active: true,
@@ -113,7 +134,14 @@ const employees = [
   {
     id: "emp004",
     email: "employee4@example.com",
-    pass: "password4",
+    pass: "123",
+    firstname: "Aditya",
+    taskcount: {
+      active: 2,
+      failed: 1,
+      completed: 1,
+      newTask: 1,
+    },
     tasks: [
       {
         active: true,
@@ -150,7 +178,14 @@ const employees = [
   {
     id: "emp005",
     email: "employee5@example.com",
-    pass: "password5",
+    pass: "123",
+    firstname: "Krishna",
+    taskcount: {
+      active: 2,
+      failed: 1,
+      completed: 1,
+      newTask: 1,
+    },
     tasks: [
       {
         active: true,
@@ -186,6 +221,7 @@ const employees = [
   },
 ];
 
+
 const admin = [
   {
     id: "admin001",
@@ -197,13 +233,12 @@ const admin = [
 
 export const setLocalStorage =()=>{
     localStorage.setItem("employees", JSON.stringify(employees));
-    localStorage.setItem("admin", JSON.stringify(admin));
-    
+    localStorage.setItem("admin", JSON.stringify(admin)); 
 }
 
 export const getLocalStorage =()=>{
     const employees = JSON.parse(localStorage.getItem("employees"));
     const admin = JSON.parse(localStorage.getItem("admin"));
-    console.log(employees, admin);
+   return {employees,admin}
 };
 
